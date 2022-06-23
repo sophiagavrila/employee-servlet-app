@@ -3,6 +3,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Employee Servlet App</title>
+
+
+<!-- defer will let the html load FIRST before linking the script -->
+	<!-- <script src="emp-table-script.js" defer></script> -->
 </head>
 <body>
 
@@ -34,16 +38,13 @@
 	</form>
 	
 	<!-- Later we'll put a form below which sends a GET request to view all the employees -->
-	<form method="GET" action="employees"> 
-	
-		<!--  edit web.xml
-			  edit Frontcontroller
-			  add functionality to request helper -->
-		<input type="submit" value="See All Employees">
-	
-	</form>
-	
+	<button id="all-emps">View All Employees</button> <!-- ctrl + shift + v to preview-->
+
+	<table>
+
+	</table>
 
 
+	<script src="emp-table-script.js"></script>
 </body>
 </html>
