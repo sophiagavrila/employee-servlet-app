@@ -16,6 +16,38 @@ let button = document.getElementById('all-emps')
 // button.addEventListener('click', sayHello)
 button.addEventListener('click', fetchEmps);
 
+function buildTable(data) {
+
+    console.log('buildTable method triggered');
+
+    console.log(data);
+    let header = document.createElement('thead'); // these are HTML elements
+    let headerRow = document.createElement('tr');
+
+    header.appendChild(headerRow);
+
+    // append the header to the table
+    table.appendChild(header); 
+
+    // create a header column for FirstName
+    let th1 = document.createElement('th');
+    th1.innerHTML = 'First Name';
+
+    // create a header column for last Name
+    let th2 = document.createElement('th');
+    th2.innerHTML = 'Last Name';
+
+    // create a header column for username
+    let th3 = document.createElement('th');
+    th3.innerHTML = 'Username';
+
+    // apend the child nodes onto the header
+    headerRow.appendChild(th1);
+    headerRow.appendChild(th2);
+    headerRow.appendChild(th3);
+
+}
+
 function fetchEmps() {
 
     // Fetch API is modern interface that allows you

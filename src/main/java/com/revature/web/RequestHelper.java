@@ -33,7 +33,7 @@ public class RequestHelper {
 		
 		// 1. set the content type to be application/json
 		response.setContentType("application/json");
-		response.addHeader("Access-Control-Allow-Origin", "http://localhost:8080");
+		response.addHeader("Access-Control-Allow-Origin", "*");
 //		response.setContentType("text/html");
 		
 		// 2. Call the getAll() method from the employee service
