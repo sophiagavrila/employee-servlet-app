@@ -5,6 +5,15 @@ const pokeName = document.getElementById('resp-name');
 const pokeImg = document.getElementById('resp-sprite');
 const button = document.querySelector('button')
 
+// whenever someone presses enter, they trigger the button to click
+pokeId.addEventListener("keyup", function(event) {
+
+    if (event.keyCode == 13) {
+        event.preventDefault();
+        button.click;
+    }
+
+})
 
 // create a function to fethc a poke object
 function fetchPokemon() {
