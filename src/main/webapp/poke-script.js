@@ -12,17 +12,8 @@ function fetchPokemon() {
     // capture the input from the document
     let idNum = pokeId.value; // capturing the value of the input element
 
-    
-    const options = {
-        method: method,
-        headers: new Headers({'content-type': 'application/json'}),
-        mode: 'no-cors'
-    };
-
-    options.body = JSON.stringify(body);
-
     // send a fetch call to the pokeAPI and concatenate the value of the pokemon we want
-    fetch(`https://pokeapi.co/api/v2/pokemon/${idNum}`, options)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${idNum}`)
         .then(response => response.json()) // parsed into a JS object
         // .then(obj => console.log(obj))
         .then(renderPokemon)
