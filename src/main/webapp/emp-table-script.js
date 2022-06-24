@@ -78,8 +78,15 @@ function fetchEmps() {
     // you get back asynchrnously
     let hostname = window.location.hostname;  // this will grab the IP of where it's deployed  
 
+    console.log('fetchEmps triggered')
+
     // this is a template literal (introduced in ES6)
-    fetch(`http://${hostname}:8080/employee-servlet-app/employees`)
+
+    // the following request will work for testing on localhost
+    // fetch(`http://${hostname}:8080/employee-servlet-app/employees`)
+
+    // this is changed because the port will be inferred when deployed
+    fetch(`http://${hostname}/employee-servlet-app/employees`) 
     .then(response => response.json()) // trakes a json string and transforms
                                         // it to a javaScript object
     //.then(obj => console.log(obj)); // print the JS obj to the console
